@@ -1,5 +1,4 @@
-/** Require Libraries. */
-
+// Require Libraries.
 var gulp = require( 'gulp' ),
 	path = require( 'path' ),
 	compass = require( 'gulp-compass' ),
@@ -38,7 +37,6 @@ gulp.task('serve', function() {
 			siteurl = result;
 
 			browserSync.init({
-				// TODO: Set proxy address dynamically
 				proxy: siteurl,
 				ghostMode: {
 					clicks: true,
@@ -59,8 +57,7 @@ gulp.task( 'compass', function () {
 			config_file: cwd + '/scss/config.rb',
 			css: paths.css,
 			sass: paths.sass
-		}))
-		.pipe( gulp.dest( paths.sass ) );
+		}));
 });
 
 // Watch Task.
